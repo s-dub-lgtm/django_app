@@ -9,16 +9,8 @@
 </head>
 <body>
 <h1>{{ title }}</h1>
-<p>{{ result|safe }}</p>
 <table>
-    <form action="{% url 'index' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <tr>
-            <td></td>
-            <td><input type="submit" value="click"></td>
-        </tr>
-    </form>
+    {{ data|safe }}
 </table>
 </body>
 </html>
